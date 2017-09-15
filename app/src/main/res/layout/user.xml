@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="18">
+
+        <!-- orientation   容器中控件大致的排列方式
+                        vertical 垂直  horizontal水平（默认值）-->
+        <!-- android:weightSum="5"    LinearLayout总共平分成5块大小区域；
+           LinearLayout里面的控件
+           用android:layout_wetght=“1”，
+                          这表示它占用整个布局的1/5。 -->
+
+        <!-- 设置一个视图的尺寸为wrap_content将强制性地使视图扩展以显示全部内容。
+            以TextView和ImageView控件为例，
+            设置为wrap_content将完整显示其内部的文本和图像。
+            布局元素将根据内容更改大小。
+            设置一个视图的尺寸为wrap_content大体等同于
+            设置Windows控件的Autosize属性为True。 -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名"
+                android:textSize="20dp"
+                android:id="@+id/textView2"
+                />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="6"
+                android:hint="    请输入用户名"
+                android:textColorHint="#99CCFF"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码"
+                android:textSize="20dp"
+                android:id="@+id/textView3" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:password="true"
+                android:layout_weight="6"
+                android:hint="    请输入密码"
+                android:inputType="number"
+                android:textColorHint="#99CCFF"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>
